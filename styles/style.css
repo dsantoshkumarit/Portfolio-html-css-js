@@ -1,0 +1,608 @@
+/*root : nothing but html element*/
+/* initializing all the variables needed */
+:root {
+  --main-white: #fcf8e8;
+  --main-red: #db3d3d;
+  /* --main-blue: #2d4059; */
+  --main-darkpurple: #40394a;
+  --main-gray: #303841;
+  --main-purple: #886ce4;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 60%;
+  }
+}
+
+@media (max-width: 980) {
+  html {
+    font-size: 58%;
+  }
+}
+
+@media (max-width: 460px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--main-white);
+
+  /* test */
+  /* overflow: auto; */
+  /* scroll-snap-type: y mandatory; */
+}
+
+h1,
+h2 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  text-align: center;
+}
+
+h1 {
+  font-size: 6rem;
+}
+
+h2 {
+  font-size: 4.2rem;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--main-white);
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+/* Scrollbar Styling */
+
+/* scrollbar width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Scrollbar Track*/
+::-webkit-scrollbar-track {
+  background: #536162;
+}
+
+/* Scrollbar track piece */
+::-webkit-scrollbar-track-piece:vertical:end {
+  background: #0a0c0c;
+}
+
+/* Scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background: #f8f5f1;
+  border-radius: 10px;
+}
+
+/* Scrollbar css */
+
+/* Navbar styles */
+
+/* .nav {
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--main-purple);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+  z-index: 10;
+}
+
+.nav-img-avatar {
+  position: absolute;
+  width: 50px;
+  height: auto;
+  transition: 0.5s;
+  top: 5px;
+  left: 10px;
+}
+
+.nav-img-avatar:hover {
+  transform: scale(1.1);
+}
+
+.nav-list {
+  display: flex;
+  margin-right: 2rem;
+}
+
+@media (max-width: 460px) {
+  .nav {
+    justify-content: center;
+  }
+  .nav-list {
+    margin: 0 1rem;
+  }
+  .nav-img-avatar {
+    display: none;
+  }
+}
+
+.nav-list a {
+  display: block;
+  font-size: 2.2rem;
+  padding: 2rem;
+}
+
+.nav-list a::after {
+  content: "";
+  position: relative;
+  display: block;
+}
+
+.nav-list a:hover::after {
+  border-bottom: 0.35rem solid var(--main-white);
+  animation: example 0.3s ease-out both;
+}
+
+@keyframes example {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 100%;
+  }
+} */
+
+/*Start New Nav Styles */
+nav {
+  display: flex;
+
+  position: sticky;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  background-color: var(--main-purple);
+  font-family: "Poppins", sans-serif;
+}
+
+nav.scroll-up,
+nav:focus-within {
+  top: 0;
+}
+
+nav.scroll-down {
+  top: -100%;
+}
+
+.logo {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.nav-links a:hover {
+  color: #f4eee8;
+  animation: example 0.3s ease-out both;
+}
+
+@keyframes example {
+  from {
+    border-bottom: 0px solid rgba(189, 199, 201, 0);
+  }
+
+  to {
+    border-bottom: 5px solid rgba(189, 199, 201, 1);
+  }
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 1024px) {
+  .nav-links {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
+    background: var(--main-purple);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+
+  .nav-links li {
+    opacity: 0;
+  }
+
+  .burger {
+    display: block;
+  }
+}
+
+.nav-active {
+  transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2 {
+  opacity: 0;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+/*End New Nav Styles */
+
+/* section,
+footer { */
+/* scroll-snap-align: start; */
+/* min-block-size: 100vh; */
+/* scroll-padding: 1rem; */
+/* } */
+
+/* About section styles */
+.about-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+}
+
+.about-section h2 {
+  /* color: #686d76; */
+  color: #ead3cb;
+}
+
+.typing-text-div {
+  display: flex;
+  justify-content: center;
+}
+
+.typing-text {
+  font-size: 3rem;
+  font-weight: 300;
+  color: var(--main-purple);
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid #e7e6e1; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.15em; /* Adjust as needed */
+  animation: typing 3s steps(30) 1s 1 normal both,
+    blink-caret 0.9s steps(30) infinite normal;
+}
+
+/* Gradient name overlay */
+.animate-name {
+  background-color: #906bc2;
+
+  background-image: linear-gradient(
+    135deg,
+    #7f58af,
+    #7f58af 20%,
+    #2b2e4a 20%,
+    #2b2e4a 40%,
+    #e84545 40%,
+    #e84545 60%,
+    #903749 60%,
+    #903749 80%,
+    #53354a 80%,
+    #53354a 100%
+  );
+
+  background-size: 100%;
+  background-repeat: repeat;
+  background-clip: text;
+  /* text-fill-color: transparent; */
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: gradient-animation-rev 0.75s ease-in-out forwards;
+}
+
+.animate-name:hover {
+  cursor: pointer;
+  animation: gradient-animation 0.75s ease-in-out forwards;
+}
+
+@keyframes gradient-animation-rev {
+  0% {
+    background-size: 650%;
+  }
+  50% {
+    background-size: 650%;
+  }
+  100% {
+    background-size: 100%;
+  }
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-size: 100%;
+  }
+  50% {
+    background-size: 650%;
+  }
+  100% {
+    background-size: 650%;
+  }
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #e7e6e1;
+  }
+}
+
+/* Project section styles */
+
+.projects-section {
+  text-align: center;
+  padding: 10rem 2rem;
+  background: var(--main-darkpurple);
+}
+
+.projects-section-header {
+  max-width: 640px;
+  margin: 0 auto 6rem auto;
+  border-bottom: 0.2rem solid var(--main-white);
+}
+
+@media (max-width: 460px) {
+  .projects-section-header {
+    font-size: 4rem;
+  }
+  .typing-text {
+    font-size: 2rem;
+  }
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 4rem;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  margin-bottom: 6rem;
+}
+
+@media (max-width: 490px) {
+  .projects-section {
+    padding: 6rem 1rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.project {
+  background: var(--main-gray);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 2px;
+}
+
+.code {
+  color: var(--main-white);
+  transition: color 0.3s ease-out;
+}
+
+.project:hover .code {
+  color: #ff7f50;
+}
+
+.project-image {
+  transition: 0.5s;
+  height: calc(100%-6.8rem);
+  width: 100%;
+  object-fit: cover;
+}
+
+.project-image:hover {
+  transform: scale(1.08);
+}
+
+.project-title {
+  font-size: 2rem;
+  padding: 2rem 1rem;
+}
+
+/* Contact section */
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 70vh;
+  padding: 0 2rem;
+  background: var(--main-gray);
+}
+
+.contact-section-header > h2 {
+  font-size: 6rem;
+}
+
+@media (max-width: 460px) {
+  .contact-section-header > h2 {
+    font-size: 4rem;
+  }
+}
+
+.contact-links {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  max-width: 980px;
+  margin-top: 4rem;
+  flex-wrap: wrap;
+}
+
+.contact-details {
+  font-size: 2.4rem;
+  margin: 1rem;
+  text-shadow: 2px 2px 1px #1f1f1f;
+  transition: transform 0.3s, color 0.5s ease-out;
+}
+
+.contact-details:hover {
+  color: #886ce4;
+  transform: translateY(8px);
+}
+
+/* Footer */
+
+footer {
+  font-weight: 300;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  /* background: var(--main-gray); */
+  background: black;
+  border-top: 4px;
+  border-top-color: var(--main-purple);
+  border-top-style: solid;
+}
+
+footer > p {
+  margin: 2rem;
+}
+
+@media (max-width: 460px) {
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.go_to_top_link {
+  top: -10px;
+
+  display: flex;
+  text-decoration: none;
+  font-size: 4rem;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+}
+
+.go_to_top_link i {
+  color: var(--main-purple);
+}
+
+.go_to_top_link:hover {
+  animation: to_up 0.5s ease-in-out forwards;
+}
+
+@keyframes to_up {
+  50% {
+    font-size: 3.5rem;
+    transform: translateY(-15px);
+  }
+}
