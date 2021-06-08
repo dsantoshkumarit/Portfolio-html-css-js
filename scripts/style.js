@@ -29,7 +29,7 @@ handleAnchorClick = () => {
   const burger1 = document.querySelector(".burger");
   const nav1 = document.querySelector(".nav-links");
   const navLinks1 = document.querySelectorAll(".nav-links li");
-  console.log("in event handler");
+  // console.log("in event handler");
 
   navLinks1.forEach((link, index) => {
     if (link.style.animation) {

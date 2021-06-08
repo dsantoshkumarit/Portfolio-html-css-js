@@ -21,6 +21,9 @@
       rel="stylesheet"
       ?\
     />
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet"/>
+
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet"/>
 
     <link rel="stylesheet" href="./styles/style.css" />
   </head>
@@ -44,12 +47,21 @@
     </nav> -->
     <!-- End Nav bar -->
 
+    <!--Start New Nav Bar -->
     <nav>
       <div class="logo">&lt;SD&gt;</div>
       <ul class="nav-links">
         <li>
+          <a class="anchor" onClick="handleAnchorClick()" href="#home">Home</a>
+        </li>
+        <li>
           <a class="anchor" onClick="handleAnchorClick()" href="#about"
             >About</a
+          >
+        </li>
+        <li>
+          <a class="anchor" onClick="handleAnchorClick()" href="#skills"
+            >Skills</a
           >
         </li>
         <li>
@@ -58,9 +70,23 @@
           >
         </li>
         <li>
-          <a class="anchor" onClick="handleAnchorClick()" href="#contact"
-            >Contacts</a
+          <a class="anchor" onClick="handleAnchorClick()" href="#experience"
+            >Experience</a
           >
+        </li>
+        <li>
+          <a class="anchor" onClick="handleAnchorClick()" href="#contact"
+            >Contact</a
+          >
+        </li>
+        <li>
+          <a
+            class="anchor"
+            onClick="handleAnchorClick()"
+            href="./utils/Resume.pdf"
+            target='_blank'
+            ><i class="fa fa-download" aria-hidden="true"> </i> Resume </i
+          ></a>
         </li>
       </ul>
       <div class="burger">
@@ -69,34 +95,178 @@
         <div class="line3"></div>
       </div>
     </nav>
-    <!--Start New Nav Bar -->
-
     <!-- End New Nav Bar -->
 
-    <!-- Start About section -->
-    <section id="about" class="about-section">
+    <!-- Start Home section -->
+    <section id="home" class="home-section">
+      <img src="./images/mypic.jpg" class="profilepic" />
       <h2>Hey there, I am</h2>
       <h1><span class="animate-name">Santosh Divate</span></h1>
       <div class="typing-text-div">
         <p class="typing-text">a full stack developer</p>
       </div>
     </section>
-    <!-- End About section -->
+    <!-- End Home section -->
+
+    <!-- About section start -->
+    <section id="about" class="about-section">
+      <h2 class="projects-section-header">About Me</h2>
+      <h4>
+        Hi, My name is Santosh Divate. I am an enthusiastic learner in computer
+        science, I have done courses in latest technology stack such as
+        ReactJS, NodeJs, MongoDB, Express.JS. I have been working on these
+        technologies and want to expand further.
+      </h4>
+    </section>
+    <!-- About section end -->
+
+    <!-- Skills section start -->
+    <section id='skills' class="skills-section">
+      <h2 class="projects-section-header1">Skills</h2>
+      <div class='skills-container'>
+        
+        <div class="html">
+        <p class="bar-title">
+          HTML & CSS
+          <span class="percent align-right">90%</span>
+        </p>
+        <div class="bar">
+          <div class="bar-fill bar-fill-html start"></div>
+        </div>
+        </div>
+        <div class="javascript">
+          <p class="bar-title">
+            Javascript
+            <span class="percent align-right">80%</span>
+          </p>
+          <div class="bar">
+            <div class="bar-fill bar-fill-javascript start"></div>
+          </div>
+        </div>
+        <div class="reactjs">
+          <p class="bar-title">
+            ReactJS
+            <span class="percent align-right">85%</span>
+          </p>
+          <div class="bar">
+            <div class="bar-fill bar-fill-reactjs start"></div>
+          </div>
+        </div>
+        <div class="nodejs">
+          <p class="bar-title">
+            NodeJS
+            <span class="percent align-right">80%</span>
+          </p>
+          <div class="bar">
+            <div class="bar-fill bar-fill-nodejs start"></div>
+          </div>
+        </div>
+
+        <div class="expressjs">
+          <p class="bar-title">
+            ExpressJS
+            <span class="percent align-right">75%</span>
+          </p>
+          <div class="bar">
+            <div class="bar-fill bar-fill-expressjs start"></div>
+          </div>
+        </div>
+
+        <div class="mongodb">
+          <p class="bar-title">
+            MongoDB
+            <span class="percent align-right">75%</span>
+          </p>
+          <div class="bar">
+          <div class="bar-fill bar-fill-mongodb start"></div>
+          </div>
+        </div>
+        <div class="mysql">
+          <p class="bar-title">
+            MySQL
+            <span class="percent align-right">80%</span>
+          </p>
+          <div class="bar">
+          <div class="bar-fill bar-fill-mysql start"></div>
+          </div>
+        </div>
+
+        <div class="java">
+          <p class="bar-title">
+            JAVA
+            <span class="percent align-right">70%</span>
+          </p>
+          <div class="bar">
+          <div class="bar-fill bar-fill-java start"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Skills section end -->
 
     <!-- Projects section start -->
     <section id="projects" class="projects-section">
       <h2 class="projects-section-header">These are some of my projects</h2>
       <div class="projects-grid">
         <!-- project 1 -->
-        <a
-          href="https://vigilant-dijkstra-3a542e.netlify.app/"
-          class="project project-title"
-          target="_blank"
-        >
+        <div class="project project-title">
           <p class="project-title">
-            <!-- <span class="code">&lt;</span>
-                    Tic Tac Toe
-                    <span class="code">&#47;&gt;</span> -->
+            <span class="code">Chat Room App</span>
+          </p>
+          <img
+            class="project-image"
+            loading="lazy"
+            src="./images/chatroomapp.jpg"
+            alt="Chat_room_app_img"
+          />
+          <br/>
+          <a
+            class="project-link"
+            href="https://brave-joliot-87b276.netlify.app"
+            target="_blank"
+          >
+            <span class="code1">Website</span>
+          </a>
+          <a
+            class="project-link"
+            href="https://github.com/dsantoshkumarit/React-Chat-App-FE"
+            target="_blank"
+          >
+            <span class="code1">Github</span>
+          </a>
+        </div>
+
+        <!-- project 2 -->
+        <div class="project project-title">
+          <p class="project-title">
+            <span class="code">E-Commerce App</span>
+          </p>
+          <img
+            class="project-image"
+            loading="lazy"
+            src="./images/shoppingzone.jpg"
+            alt="ECommerce_App_img"
+          />
+          <br/>
+          <a
+            class="project-link"
+            href="https://shopping-zone-fpgibfr1w-dsantoshkumarit.vercel.app/"
+            target="_blank"
+          >
+            <span class="code1">Website</span>
+          </a>
+          <a
+            class="project-link"
+            href="https://github.com/dsantoshkumarit/Shopping-zone-project"
+            target="_blank"
+          >
+            <span class="code1">Github</span>
+          </a>
+        </div>
+
+        <!-- project 3 -->
+        <div class="project project-title">
+          <p class="project-title">
             <span class="code">Tic Tac Toe</span>
           </p>
           <img
@@ -105,18 +275,26 @@
             src="./images/tictactoe2.jpg"
             alt="Tic_Tac_Toe_img"
           />
-        </a>
+          <br/>
+          <a
+            class="project-link"
+            href="https://vigilant-dijkstra-3a542e.netlify.app/"
+            target="_blank"
+          >
+            <span class="code1">Website</span>
+          </a>
+          <a
+            class="project-link"
+            href="https://github.com/dsantoshkumarit/Tictactoe_game"
+            target="_blank"
+          >
+            <span class="code1">Github</span>
+          </a>
+        </div>
 
-        <!-- project 2 -->
-        <a
-          href="https://musing-heisenberg-ac6856.netlify.app/"
-          class="project project-title"
-          target="_blank"
-        >
+        <!-- project 4 -->
+        <div class="project project-title">
           <p class="project-title">
-            <!-- <span class="code">&lt;</span>
-                    Quiz App
-                    <span class="code">&#47;&gt;</span> -->
             <span class="code">Quiz App</span>
           </p>
           <img
@@ -125,18 +303,26 @@
             src="./images/quickquiz.jpg"
             alt="Quiz_App_img"
           />
-        </a>
+          <br/>
+          <a
+            class="project-link"
+            href="https://musing-heisenberg-ac6856.netlify.app/"
+            target="_blank"
+          >
+            <span class="code1">Website</span>
+          </a>
+          <a
+            class="project-link"
+            href="https://github.com/dsantoshkumarit/Bootcamp-Tasks/tree/main/Dec_26th"
+            target="_blank"
+          >
+            <span class="code1">Github</span>
+          </a>
+        </div>
 
-        <!-- project 3 -->
-        <a
-          href="https://blissful-panini-4e3396.netlify.app/"
-          class="project project-title"
-          target="_blank"
-        >
+        <!-- project 5 -->
+        <div class="project project-title">
           <p class="project-title">
-            <!-- <span class="code">&lt;</span>
-                    Weather App
-                    <span class="code">&#47;&gt;</span> -->
             <span class="code">Weather App</span>
           </p>
           <img
@@ -145,18 +331,26 @@
             src="./images/weather_app.jpg"
             alt="Weather_App_img"
           />
-        </a>
+          <br/>
+          <a
+            class="project-link"
+            href="https://blissful-panini-4e3396.netlify.app/"
+            target="_blank"
+          >
+            <span class="code1">Website</span>
+          </a>
+          <a
+            class="project-link"
+            href="https://github.com/dsantoshkumarit/Bootcamp-Tasks/tree/main/Dec_20th"
+            target="_blank"
+          >
+            <span class="code1">Github</span>
+          </a>
+        </div>
 
-        <!-- project 4 -->
-        <a
-          href="https://wonderful-keller-fd6fc4.netlify.app/"
-          class="project project-title"
-          target="_blank"
-        >
+        <!-- project 6 -->
+        <div class="project project-title">
           <p class="project-title">
-            <!-- <span class="code">&lt;</span>
-                    Calculator App
-                    <span class="code">&#47;&gt;</span> -->
             <span class="code">Calculator App</span>
           </p>
           <img
@@ -165,10 +359,53 @@
             src="./images/calculator.jpg"
             alt="Calculator_App_img"
           />
-        </a>
+          <br/>
+          <a
+            class="project-link"
+            href="https://wonderful-keller-fd6fc4.netlify.app/"
+            target="_blank"
+          >
+            <span class="code1">Website</span>
+          </a>
+          <a
+            class="project-link"
+            href="https://github.com/dsantoshkumarit/Bootcamp-Tasks/tree/main/Dec_13th_task"
+            target="_blank"
+          >
+            <span class="code1">Github</span>
+          </a>
+        </div>
       </div>
     </section>
     <!-- Projects section end -->
+
+    <!-- Experience section start -->
+    <section id="experience" class="experience-section">
+      <div class="projects-section-header2">
+        <h2>Experience</h2>
+      </div>
+      
+      <section class="timeline">
+        <ol style='text-align:center;'>
+          <li>
+            <div>
+              <time>2013 - 2017</time> Completed my B.Tech in Information Technology branch with a CGPA of 9.64. Got placed in TCS - Chennai.
+            </div>
+          </li>
+          
+          <li>
+            <div>
+              <time>2017 - Present</time> Joined in TCS as a fresher and started working with the Project Client -  Bank Of Montreal Canada as an Maintenance and Support Engineer.
+            </div>
+          </li>
+          
+          <li></li>
+        </ol>
+        
+        
+      </section>
+    </section>
+    <!-- Experience section end -->
 
     <!-- Contact section start -->
     <section id="contact" class="contact-section">
@@ -177,23 +414,23 @@
       </div>
       <div class="contact-links">
         <a
+          href="mailto:dsantoshkumarit@gmail.com"
+          target="_blank"
+          class="btn contact-details"
+          ><i class="fa fa-envelope" aria-hidden="true"></i>
+          Gmail
+        </a>
+        <a
           href="https://github.com/dsantoshkumarit"
           target="_blank"
           class="btn contact-details"
           ><i class="fa fa-github-square" aria-hidden="true"></i> GitHub
         </a>
         <a
-          href="linkedin.com/in/santosh-divate-7730641a2"
+          href="https://www.linkedin.com/in/santosh-divate-7730641a2/"
           target="_blank"
           class="btn contact-details"
           ><i class="fa fa-linkedin-square" aria-hidden="true"></i> LinkedIn</a
-        >
-
-        <a
-          href="https://twitter.com/SantoshDivateIt"
-          target="_blank"
-          class="btn contact-details"
-          ><i class="fa fa-twitter-square" aria-hidden="true"></i> Twitter</a
         >
       </div>
       <div></div>
