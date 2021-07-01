@@ -89,7 +89,7 @@ img {
 /* scrollbar width */
 ::-webkit-scrollbar {
   width: 7px;
-  height:5px;
+  height:0;
 }
 
 /* Scrollbar Track*/
