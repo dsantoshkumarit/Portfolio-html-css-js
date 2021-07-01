@@ -88,7 +88,8 @@ img {
 
 /* scrollbar width */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 7px;
+  height:5px;
 }
 
 /* Scrollbar Track*/
@@ -475,6 +476,7 @@ footer { */
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  
   width: 100%;
   /* height: 100vh; */
   background-color: #343f56;
@@ -801,6 +803,25 @@ footer { */
 }
 
 /* skills section end */
+
+/* new skill section start */
+
+.skills-svg-img{
+  width:48px;
+  height:48px;
+}
+.skills-svg-button{
+  background:#444444;
+  color:white;
+  font-size:16px;
+  
+  font-family: "Poppins", sans-serif;
+  font-weight:bold;
+  padding:10px;
+  border-radius:10px;
+}
+
+/* new skill section end */
 
 /* Experience section style start */
 
