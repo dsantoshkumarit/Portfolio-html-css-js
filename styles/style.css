@@ -89,7 +89,7 @@ img {
 /* scrollbar width */
 ::-webkit-scrollbar {
   width: 7px;
-  height:0;
+  height: 0;
 }
 
 /* Scrollbar Track*/
@@ -111,75 +111,6 @@ img {
 /* Scrollbar css */
 
 /* Navbar styles */
-
-/* .nav {
-  display: flex;
-  justify-content: flex-end;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: var(--main-purple);
-  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
-  z-index: 10;
-}
-
-.nav-img-avatar {
-  position: absolute;
-  width: 50px;
-  height: auto;
-  transition: 0.5s;
-  top: 5px;
-  left: 10px;
-}
-
-.nav-img-avatar:hover {
-  transform: scale(1.1);
-}
-
-.nav-list {
-  display: flex;
-  margin-right: 2rem;
-}
-
-@media (max-width: 460px) {
-  .nav {
-    justify-content: center;
-  }
-  .nav-list {
-    margin: 0 1rem;
-  }
-  .nav-img-avatar {
-    display: none;
-  }
-}
-
-.nav-list a {
-  display: block;
-  font-size: 2.2rem;
-  padding: 2rem;
-}
-
-.nav-list a::after {
-  content: "";
-  position: relative;
-  display: block;
-}
-
-.nav-list a:hover::after {
-  border-bottom: 0.35rem solid var(--main-white);
-  animation: example 0.3s ease-out both;
-}
-
-@keyframes example {
-  0% {
-    width: 0%;
-  }
-
-  100% {
-    width: 100%;
-  }
-} */
 
 /*Start New Nav Styles */
 nav {
@@ -231,17 +162,17 @@ nav.scroll-down {
 }
 
 .nav-links a:hover {
-  color: #f4eee8;
-  animation: example 0.3s ease-out both;
+  /* color: #f4eee8; */
+  animation: example 0.15s ease-in-out both;
 }
 
 @keyframes example {
   from {
-    border-bottom: 0px solid rgba(189, 199, 201, 0);
+    border-bottom: 3px solid rgba(189, 199, 201, 0);
   }
 
   to {
-    border-bottom: 5px solid rgba(189, 199, 201, 1);
+    border-bottom: 3px solid rgb(255, 255, 255, 1);
   }
 }
 
@@ -476,7 +407,7 @@ footer { */
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
+
   width: 100%;
   /* height: 100vh; */
   background-color: #343f56;
@@ -806,19 +737,19 @@ footer { */
 
 /* new skill section start */
 
-.skills-svg-img{
-  width:48px;
-  height:48px;
+.skills-svg-img {
+  width: 48px;
+  height: 48px;
 }
-.skills-svg-button{
-  background:#444444;
-  color:white;
-  font-size:16px;
-  
+.skills-svg-button {
+  background: #444444;
+  color: white;
+  font-size: 16px;
+
   font-family: "Poppins", sans-serif;
-  font-weight:bold;
-  padding:10px;
-  border-radius:10px;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 10px;
 }
 
 /* new skill section end */
