@@ -2,4 +2,4 @@
 
 This is a simple portfolio built using HTML, CSS and JS.
 
-My portfolio can found at : https://santoshdivate-portfolio.netlify.app/
+Go checkout my portfolio here : https://santoshdivate-portfolio.netlify.app/
